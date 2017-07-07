@@ -45,10 +45,23 @@ public class Main extends Application {
 
 
         scene2 = new Scene(root);
-        mainStage.setTitle("WELCOME ");
+        mainStage.setTitle("Studentdata Entry ");
         mainStage.setScene(scene2);
 
         mainStage.show();
+    }
+    public void showstudentdatapage() throws IOException {
+        FXMLLoader loader =new FXMLLoader();
+        loader.setLocation(getClass().getResource("Studentdata.fxml"));
+        Parent root=loader.load();
+        Studentdatacontroller controller=loader.getController();
+        controller.setMain(this);
+
+        scene3=new Scene(root);
+        mainStage.setTitle("Student Records");
+        mainStage.setScene(scene3);
+        mainStage.show();
+
     }
     public void quit()throws IOException {
         mainStage.close();

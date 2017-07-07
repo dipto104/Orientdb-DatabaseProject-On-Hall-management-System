@@ -17,5 +17,8 @@ public class Hompagecontroller {
     public void insertstudent() throws IOException {
         main.showHomePage();
     }
+    public void Showstudentdata()throws IOException{
+        main.showstudentdatapage();
+    }
 
 }
