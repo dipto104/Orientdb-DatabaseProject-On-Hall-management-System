@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="548.0" prefWidth="678.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Hompagecontroller">
+  <children>
+    <Button layoutX="506.0" layoutY="321.0" mnemonicParsing="false" onAction="#exithome" prefWidth="63.000099999997474" text="Exit" />
+    <Button layoutX="506.0" layoutY="247.0" mnemonicParsing="false" onAction="#insertstudent" text="Insert" />
+  </children>
+</AnchorPane>
