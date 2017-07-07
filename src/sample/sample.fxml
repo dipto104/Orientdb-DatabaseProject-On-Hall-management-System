@@ -26,7 +26,7 @@
         <TextField fx:id="hname" layoutX="37.0" layoutY="484.0" prefWidth="200.0" />
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="256.0" layoutY="25.0" prefHeight="37.0" prefWidth="149.0" text="Student Entry" />
         <Button layoutX="120.0" layoutY="531.0" mnemonicParsing="false" onAction="#actionsubmit" text="Submit" />
-        <Button layoutX="237.0" layoutY="531.0" mnemonicParsing="false" text="Cancel" />
+        <Button layoutX="237.0" layoutY="531.0" mnemonicParsing="false" onAction="#actioncancel" text="Cancel" />
       </children>
     </AnchorPane>
   </children>

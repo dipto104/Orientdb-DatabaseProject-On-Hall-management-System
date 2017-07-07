@@ -29,6 +29,9 @@ public class Controller {
                 "root", "12345");
         System.out.println("graph connected\n");
     }
+    public void actioncancel(){
+
+    }
 
     public void actionsubmit(){
         System.out.println(name.getText()+"\n");
