@@ -7,39 +7,59 @@ import javafx.beans.property.SimpleStringProperty;
  * Created by Dipto on 7/7/2017.
  */
 public class Table {
-    private final SimpleIntegerProperty rid;
-    private final SimpleStringProperty rdate;
+    private final SimpleStringProperty rrool;
     private final SimpleStringProperty rname;
-    private final SimpleIntegerProperty rsalary;
-    public Table(int rid,String rdate,String rname,int rsalary){
-        this.rid=new SimpleIntegerProperty(rid);
-        this.rdate=new SimpleStringProperty(rdate);
+    private final SimpleStringProperty rdept;
+    private final SimpleStringProperty rblood;
+    private final SimpleStringProperty rroomno;
+    private final SimpleStringProperty rhallname;
+    public Table(String rrool,String rname,String rdept,String rblood,String rroomno,String rhallname){
+        this.rrool=new SimpleStringProperty(rrool);
         this.rname=new SimpleStringProperty(rname);
-        this.rsalary=new SimpleIntegerProperty(rsalary);
+        this.rdept=new SimpleStringProperty(rdept);
+        this.rblood=new SimpleStringProperty(rblood);
+        this.rroomno=new SimpleStringProperty(rroomno);
+        this.rhallname=new SimpleStringProperty(rhallname);
     }
-    public Integer getRid(){
-        return rid.get();
-    }
-    public String getRdate(){
-        return rdate.get();
+    public String getRrool(){
+        return rrool.get();
     }
     public String getRname(){
-        return  rname.get();
+        return rname.get();
     }
-    public Integer getRsalary(){
-        return rsalary.get();
+    public String getRdept(){
+        return  rdept.get();
     }
-    public void setRid(Integer v){
-        rid.set(v);
+    public String getRblood(){
+        return rblood.get();
     }
-    public void setRdate(String v){
-        rdate.set(v);
+    public String getRroomno(){
+        return rroomno.get();
+    }
+    public String getRhallname(){
+        return rhallname.get();
+    }
+
+
+
+
+    public void setRrool(String v){
+        rrool.set(v);
     }
     public void setRname(String v){
         rname.set(v);
     }
-    public void setRsalary(Integer v){
-        rsalary.set(v);
+    public void setRdept(String v){
+        rdept.set(v);
+    }
+    public void setRblood(String v){
+        rblood.set(v);
+    }
+    public void setRroomno(String v){
+        rroomno.set(v);
+    }
+    public void setRhallname(String v){
+        rhallname.set(v);
     }
 
 

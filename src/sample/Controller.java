@@ -22,6 +22,10 @@ public class Controller {
     public TextField blood;
     public TextField roomno;
 
+    public Controller(){
+        graphinit();
+    }
+
     public void actionname(){
 
     }
@@ -37,7 +41,6 @@ public class Controller {
     @FXML
     public void actioncancel() throws IOException {
         main.backmenu();
-        System.out.println("dpp");
     }
 
     public void actionsubmit(){
@@ -47,7 +50,7 @@ public class Controller {
         System.out.println(roomno.getText()+"\n");
         System.out.println(blood.getText()+"\n");
         System.out.println(hname.getText()+"\n");
-        graphinit();
+
 
         /*Vertex vPerson = graph.addVertex("class:Student");
         vPerson.setProperty("name",name.getText() );
@@ -57,14 +60,15 @@ public class Controller {
         vPerson.setProperty("bloodgroup", blood.getText());
         vPerson.setProperty("hallname", hname.getText());*/
 
-       // graph.command(new OCommandSQL(
-        //"INSERT INTO Student (name, roll, dept, room_no, bloodgroup, hallname ) VALUES (name.getText(), roll.getText(),dept.getText(), roomno.getText(),blood.getText(),hname.getText() )")).execute();
+        graph.command(new OCommandSQL(
+        "INSERT INTO Student (name, roll, dept, room_no, bloodgroup, hallname ) VALUES ('"+name.getText()+
+                "', '"+roll.getText()+"','"+dept.getText()+"', '"+roomno.getText()+"','"+blood.getText()+"','"+hname.getText()+"' )")).execute();
         //printproperty();
         String s= name.getText();
         System.out.println(s);
-        graph.command(new OCommandSQL(
+        /*graph.command(new OCommandSQL(
                 "INSERT INTO Employee (id, join_date, name, salary ) VALUES " +
-                        "('"+roll.getText()+"', '2017-12-25','"+s+"', '20181' )")).execute();
+                        "('"+roll.getText()+"', '2017-12-25','"+s+"', '20181' )")).execute();*/
     }
 
 }
