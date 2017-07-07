@@ -2,9 +2,14 @@ package sample;
 
 import com.orientechnologies.orient.core.sql.OCommandSQL;
 import com.tinkerpop.blueprints.Vertex;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import com.tinkerpop.blueprints.impls.orient.OrientGraph;
+
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+
 public class Controller {
 
     public OrientGraph graph;
@@ -29,8 +34,10 @@ public class Controller {
                 "root", "12345");
         System.out.println("graph connected\n");
     }
-    public void actioncancel(){
-
+    @FXML
+    public void actioncancel() throws IOException {
+        main.backmenu();
+        System.out.println("dpp");
     }
 
     public void actionsubmit(){

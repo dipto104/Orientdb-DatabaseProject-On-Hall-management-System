@@ -63,6 +63,19 @@ public class Main extends Application {
         mainStage.show();
 
     }
+    public void backmenu() throws IOException{
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("homepage.fxml"));
+        Parent root = loader.load();
+
+        Hompagecontroller controller=loader.getController();
+        controller.setMain(this);
+
+        scene1 = new Scene(root);
+        mainStage.setScene(scene1);
+
+        mainStage.show();
+    }
     public void quit()throws IOException {
         mainStage.close();
     }
