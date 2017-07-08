@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    Scene scene1,scene2,scene3,scene4;
+    Scene scene1,scene2,scene3,scene4,scene5;
     Stage mainStage;
     @Override
     public void start(Stage stage) throws Exception {
@@ -75,6 +75,18 @@ public class Main extends Application {
         mainStage.setScene(scene4);
         mainStage.show();
     }
+    public void showstudentfeespage()throws IOException{
+        FXMLLoader loader =new FXMLLoader();
+        loader.setLocation(getClass().getResource("Studentdiningfee.fxml"));
+        Parent root=loader.load();
+        Studentdiningfeecontroller controller=loader.getController();
+        controller.setMain(this);
+
+        scene5=new Scene(root,700,650);
+        mainStage.setTitle("Students Dining fees Data");
+        mainStage.setScene(scene5);
+        mainStage.show();
+    }
     public void backmenu() throws IOException{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("homepage.fxml"));
@@ -83,7 +95,7 @@ public class Main extends Application {
         Hompagecontroller controller=loader.getController();
         controller.setMain(this);
 
-        scene1 = new Scene(root,750,650);
+        scene1 = new Scene(root,700,650);
         mainStage.setScene(scene1);
 
         mainStage.show();

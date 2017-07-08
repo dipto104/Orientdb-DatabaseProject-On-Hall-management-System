@@ -27,6 +27,10 @@
     <Button layoutX="612.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionback" prefWidth="71.0" text="Back" />
     <Button layoutX="516.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actiondelete" text="Delete" />
     <Button layoutX="412.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionupdate" text="Update" />
-    <Label layoutX="0.0" layoutY="464.0" prefHeight="52.0" prefWidth="308.0" text="Select Student_id to Update or Delete records" textFill="RED" />
+    <Label layoutX="0.0" layoutY="464.0" prefHeight="52.0" prefWidth="327.0" text="Select Student_id to Update or Delete records" textFill="RED">
+      <font>
+        <Font name="System Bold" size="15.0" />
+      </font>
+    </Label>
   </children>
 </AnchorPane>

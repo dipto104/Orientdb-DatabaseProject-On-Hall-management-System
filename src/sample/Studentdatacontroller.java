@@ -58,6 +58,7 @@ public  class Studentdatacontroller implements Initializable{
     }
     public void Actiondelete() {
         graph.command(new OCommandSQL("DELETE FROM STUDENT WHERE roll = '"+selectedroll+"'")).execute();
+        graph.command(new OCommandSQL("DELETE FROM Diningfee WHERE roll = '"+selectedroll+"'")).execute();
         tableinsert();
     }
 

@@ -43,7 +43,7 @@ public class Controller {
         main.backmenu();
     }
 
-    public void actionsubmit(){
+    public void actionsubmit()throws IOException{
         System.out.println(name.getText()+"\n");
         System.out.println(roll.getText()+"\n");
         System.out.println(dept.getText()+"\n");
@@ -63,9 +63,15 @@ public class Controller {
         graph.command(new OCommandSQL(
         "INSERT INTO Student (name, roll, dept, room_no, bloodgroup, hallname ) VALUES ('"+name.getText()+
                 "', '"+roll.getText()+"','"+dept.getText()+"', '"+roomno.getText()+"','"+blood.getText()+"','"+hname.getText()+"' )")).execute();
-        //printproperty();
-        String s= name.getText();
-        System.out.println(s);
+
+
+
+        graph.command(new OCommandSQL(
+                "INSERT INTO Diningfee (roll, roomno, mess1st, mess2nd, mess3rd, mess4th, mess5th ,mess6th,duefee) VALUES (" +
+                        "'"+roll.getText()+"','"+roomno.getText()+"','1500','1500','1500','1500','1500','1500','9000')")).execute();
+        //String s= name.getText();
+       // System.out.println(s);
+        main.showstudentdatapage();
         /*graph.command(new OCommandSQL(
                 "INSERT INTO Employee (id, join_date, name, salary ) VALUES " +
                         "('"+roll.getText()+"', '2017-12-25','"+s+"', '20181' )")).execute();*/

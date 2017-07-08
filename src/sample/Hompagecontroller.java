@@ -20,5 +20,9 @@ public class Hompagecontroller {
     public void Showstudentdata()throws IOException{
         main.showstudentdatapage();
     }
+    public void Showdiningfee() throws IOException{
+        main.showstudentfeespage();
+        System.out.println("cliked");
+    }
 
 }
