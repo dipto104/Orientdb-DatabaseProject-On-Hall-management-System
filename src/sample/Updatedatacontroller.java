@@ -40,9 +40,7 @@ public class Updatedatacontroller {
 
     }
     public void Actioncancel() throws IOException {
-
         main.showstudentdatapage();
-
     }
     public void graphinit() {
         graph = new OrientGraph("remote:localhost/Project1",
@@ -74,6 +72,16 @@ public class Updatedatacontroller {
         blood.setText(s4);
         roomno.setText(s5);
         hname.setText(s6);
+    }
+    public void Actionsubmit() throws IOException {
+        updatedata();
+        main.showstudentdatapage();
+    }
+    public void updatedata(){
+        graph.command(new OCommandSQL(
+               "UPDATE STUDENT SET name = '"+name.getText()+"',roll='"+roll.getText()+"',dept='"+dept.getText()+"', " +
+                        "room_no='"+roomno.getText()+"',bloodgroup='"+blood.getText()+"',hallname='"+hname.getText()+"' WHERE  ROll='"+stdid+"'")).execute();
+
     }
 
 }
