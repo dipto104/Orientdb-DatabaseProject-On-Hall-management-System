@@ -68,7 +68,7 @@ public class Controller {
 
         graph.command(new OCommandSQL(
                 "INSERT INTO Diningfee (roll, roomno, mess1st, mess2nd, mess3rd, mess4th, mess5th ,mess6th,duefee) VALUES (" +
-                        "'"+roll.getText()+"','"+roomno.getText()+"','1500','1500','1500','1500','1500','1500','9000')")).execute();
+                        "'"+roll.getText()+"','"+roomno.getText()+"','1500/-','1500/-','1500/-','1500/-','1500/-','1500/-','9000/-')")).execute();
         //String s= name.getText();
        // System.out.println(s);
         main.showstudentdatapage();

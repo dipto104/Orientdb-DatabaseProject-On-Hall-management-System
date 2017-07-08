@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
@@ -24,7 +25,10 @@ import java.util.ResourceBundle;
 public class Studentdiningfeecontroller implements Initializable{
 
     Main main;
+    public static String sendroll;
     public OrientGraph graph;
+    @FXML
+    TextField inputroll;
     @FXML
     TableView<Diningfeemodel> table2;
     @FXML
@@ -57,6 +61,11 @@ public class Studentdiningfeecontroller implements Initializable{
     public void Actionback() throws IOException {
         main.backmenu();
     }
+    public void Actionmesspay() throws IOException {
+        sendroll=inputroll.getText();
+        main.ShowDiningpaymentpage();
+
+    }
     public void graphinit() {
         graph = new OrientGraph("remote:localhost/Project1",
                 "root", "12345");
@@ -87,14 +96,14 @@ public class Studentdiningfeecontroller implements Initializable{
     }
     public void tableinsert(){
 
-            //data.clear();
+            data.clear();
 
             String s1,s2,s3,s4,s5,s6,s7,s8,s9;
             int a1=1;
 
             for (Vertex v : (Iterable<Vertex>) graph.command(
                     new OCommandSQL(
-                            "SELECT * FROM Diningfee ORDER BY ROLL ASC")).execute()) {
+                            "SELECT * FROM Diningfee order by ROLL ASC ")).execute()) {
                 //System.out.println("- Bought: " + v.getProperty("name") + v.getId());
                 s1=v.getProperty("roll").toString();
                 s2=v.getProperty("roomno").toString();

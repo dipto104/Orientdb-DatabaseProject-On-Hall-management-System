@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="587.0" prefWidth="716.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Diningpaymentcontroller">
+  <children>
+    <Button layoutX="558.0" layoutY="490.0" mnemonicParsing="false" onAction="#Actionback" prefWidth="76.0" text="Back" />
+    <CheckBox fx:id="Cb1" layoutX="46.0" layoutY="188.0" mnemonicParsing="false" onAction="#Action1mess" prefWidth="143.0" text="1st_Mess" />
+    <CheckBox fx:id="Cb2" layoutX="47.0" layoutY="244.0" mnemonicParsing="false" onAction="#Action2mess" text="2nd_Mess" />
+    <CheckBox fx:id="Cb3" layoutX="46.0" layoutY="294.0" mnemonicParsing="false" onAction="#Action3mess" text="3rd_Mess" />
+    <CheckBox fx:id="Cb4" layoutX="47.0" layoutY="339.0" mnemonicParsing="false" onAction="#Action4mess" text="4th_Mess" />
+    <CheckBox fx:id="Cb5" layoutX="47.0" layoutY="392.0" mnemonicParsing="false" onAction="#Action5mess" text="5th_Mess" />
+    <CheckBox fx:id="Cb6" layoutX="47.0" layoutY="439.0" mnemonicParsing="false" onAction="#Action6mess" text="6th_Mess" />
+    <Button layoutX="417.0" layoutY="490.0" mnemonicParsing="false" onAction="#Actionsubmit" text="Submit" />
+    <Button layoutX="294.0" layoutY="491.0" mnemonicParsing="false" onAction="#Actionedit" text="Edit" />
+    <Label fx:id="name" layoutX="17.0" layoutY="110.0" text="Name:">
+      <font>
+        <Font name="System Bold Italic" size="15.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="roll" font="$x1" layoutX="228.0" layoutY="110.0" text="Std_Id:" />
+    <Label fx:id="dept" font="$x1" layoutX="370.0" layoutY="110.0" text="Department:" />
+    <Label fx:id="duefee" font="$x1" layoutX="434.0" layoutY="284.0" prefWidth="200.0" text="Due_Payment:" />
+    <Label alignment="CENTER" layoutX="196.0" layoutY="34.0" prefHeight="42.0" prefWidth="314.0" text="Dining Mess Payment">
+      <font>
+        <Font name="Arial Black" size="25.0" />
+      </font>
+    </Label>
+    <Label fx:id="roomno" font="$x1" layoutX="562.0" layoutY="110.0" text="Room_No:" />
+  </children>
+</AnchorPane>
