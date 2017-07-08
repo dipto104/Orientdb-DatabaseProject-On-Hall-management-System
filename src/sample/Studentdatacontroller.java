@@ -5,14 +5,17 @@ import com.orientechnologies.orient.core.sql.OCommandSQL;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.impls.orient.OrientGraph;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import Tablemodel.Table;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import javax.mail.FetchProfile;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +25,7 @@ import java.util.ResourceBundle;
  */
 public class Studentdatacontroller implements Initializable{
     Main main;
+    String selectedroll;
     public OrientGraph graph;
     @FXML
     TableView<Table> table1;
@@ -39,6 +43,7 @@ public class Studentdatacontroller implements Initializable{
     TableColumn<Table,String> hallname;
     public Studentdatacontroller(){
         graphinit();
+
     }
 
     public void setMain(Main scene){
@@ -47,6 +52,13 @@ public class Studentdatacontroller implements Initializable{
     }
     public void Actionback() throws IOException {
         main.backmenu();
+    }
+    public void Actionupdate() {
+
+    }
+    public void Actiondelete() {
+        graph.command(new OCommandSQL("DELETE FROM STUDENT WHERE roll = '"+selectedroll+"'")).execute();
+        tableinsert();
     }
 
     public void graphinit() {
@@ -70,8 +82,26 @@ public class Studentdatacontroller implements Initializable{
         hallname.setCellValueFactory(new PropertyValueFactory<Table,String>("rhallname"));
         tableinsert();
         table1.setItems(data);
+
+
+
+        table1.getSelectionModel().setCellSelectionEnabled(true);
+        ObservableList selectedCells = table1.getSelectionModel().getSelectedCells();
+
+        selectedCells.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(Change c) {
+                TablePosition tablePosition = (TablePosition) selectedCells.get(0);
+                Object val = tablePosition.getTableColumn().getCellData(tablePosition.getRow());
+                selectedroll=val.toString();
+                System.out.println("Selected Value" + val);
+            }
+        });
     }
     public void tableinsert(){
+        try {
+            data.clear();
+
         String s1,s2,s3,s4,s5,s6;
 
         for (Vertex v : (Iterable<Vertex>) graph.command(
@@ -88,6 +118,10 @@ public class Studentdatacontroller implements Initializable{
             Table entry=new Table(s1,s2,s3,s4,s5,s6);
             data.add(entry);
             //s1=v.getProperty("name").toString();
+
+            }
+        }
+        catch (Exception e){
 
         }
         /*for(int i=1;i<=10;i++){

@@ -23,7 +23,7 @@ public class Main extends Application {
         mainStage=stage;
 
 
-        scene1 = new Scene(root);
+        scene1 = new Scene(root,700,650);
         stage.setScene(scene1);
         stage.show();
     }
@@ -44,7 +44,7 @@ public class Main extends Application {
 
 
 
-        scene2 = new Scene(root);
+        scene2 = new Scene(root,700,650);
         mainStage.setTitle("Studentdata Entry ");
         mainStage.setScene(scene2);
 
@@ -57,7 +57,7 @@ public class Main extends Application {
         Studentdatacontroller controller=loader.getController();
         controller.setMain(this);
 
-        scene3=new Scene(root);
+        scene3=new Scene(root,700,650);
         mainStage.setTitle("Student Records");
         mainStage.setScene(scene3);
         mainStage.show();
@@ -71,7 +71,7 @@ public class Main extends Application {
         Hompagecontroller controller=loader.getController();
         controller.setMain(this);
 
-        scene1 = new Scene(root);
+        scene1 = new Scene(root,750,650);
         mainStage.setScene(scene1);
 
         mainStage.show();
