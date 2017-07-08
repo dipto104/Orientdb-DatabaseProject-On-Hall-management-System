@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="614.0" prefWidth="693.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Updatedatacontroller">
+  <children>
+    <Label layoutX="234.0" layoutY="76.0" text="Name" />
+    <Label layoutX="234.0" layoutY="154.0" text="Student_Id" />
+    <Label layoutX="234.0" layoutY="226.0" prefWidth="99.0" text="Room_No" />
+    <Label layoutX="234.0" layoutY="297.0" text="Department" />
+    <Label layoutX="234.0" layoutY="429.0" text="Hall_Name" />
+    <Label layoutX="234.0" layoutY="363.0" text="Blood_Group" />
+    <TextField fx:id="name" layoutX="234.0" layoutY="96.0" prefWidth="200.0" />
+    <TextField fx:id="roll" layoutX="234.0" layoutY="174.0" prefWidth="200.0" />
+    <TextField fx:id="roomno" layoutX="234.0" layoutY="246.0" prefWidth="200.0" />
+    <TextField fx:id="dept" layoutX="234.0" layoutY="317.0" prefWidth="200.0" />
+    <TextField fx:id="blood" layoutX="234.0" layoutY="383.0" prefWidth="200.0" />
+    <TextField fx:id="hname" layoutX="234.0" layoutY="449.0" prefWidth="200.0" />
+    <Button layoutX="321.0" layoutY="521.0" mnemonicParsing="false" text="Submit" />
+    <Button layoutX="425.0" layoutY="521.0" mnemonicParsing="false" onAction="#Actioncancel" text="Cancel" />
+    <Label alignment="CENTER" layoutX="238.0" layoutY="14.0" prefHeight="37.0" prefWidth="200.0" text="Update Sudents Data">
+      <font>
+        <Font name="Arial Black" size="15.0" />
+      </font>
+    </Label>
+    <Button layoutX="235.0" layoutY="521.0" mnemonicParsing="false" onAction="#Actionedit" prefWidth="65.0" text="Edit" />
+  </children>
+</AnchorPane>

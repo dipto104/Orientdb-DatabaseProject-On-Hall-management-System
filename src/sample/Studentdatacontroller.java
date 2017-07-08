@@ -23,9 +23,9 @@ import java.util.ResourceBundle;
 /**
  * Created by Dipto on 7/7/2017.
  */
-public class Studentdatacontroller implements Initializable{
+public  class Studentdatacontroller implements Initializable{
     Main main;
-    String selectedroll;
+    public static String selectedroll;
     public OrientGraph graph;
     @FXML
     TableView<Table> table1;
@@ -53,8 +53,8 @@ public class Studentdatacontroller implements Initializable{
     public void Actionback() throws IOException {
         main.backmenu();
     }
-    public void Actionupdate() {
-
+    public void Actionupdate() throws IOException {
+        main.showupdatedatapage();
     }
     public void Actiondelete() {
         graph.command(new OCommandSQL("DELETE FROM STUDENT WHERE roll = '"+selectedroll+"'")).execute();
@@ -114,7 +114,7 @@ public class Studentdatacontroller implements Initializable{
             s4=v.getProperty("bloodgroup").toString();
             s5=v.getProperty("room_no").toString();
             s6=v.getProperty("hallname").toString();
-            System.out.println("- Bought: " + s1+s2+s3+s4);
+            //System.out.println("- Bought: " + s1+s2+s3+s4);
             Table entry=new Table(s1,s2,s3,s4,s5,s6);
             data.add(entry);
             //s1=v.getProperty("name").toString();
