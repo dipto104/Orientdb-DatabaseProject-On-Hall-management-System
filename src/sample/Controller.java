@@ -50,6 +50,7 @@ public class Controller {
         System.out.println(roomno.getText()+"\n");
         System.out.println(blood.getText()+"\n");
         System.out.println(hname.getText()+"\n");
+        String s3=dept.getText().toUpperCase();
 
 
         /*Vertex vPerson = graph.addVertex("class:Student");
@@ -62,7 +63,7 @@ public class Controller {
 
         graph.command(new OCommandSQL(
         "INSERT INTO Student (name, roll, dept, room_no, bloodgroup, hallname ) VALUES ('"+name.getText()+
-                "', '"+roll.getText()+"','"+dept.getText()+"', '"+roomno.getText()+"','"+blood.getText()+"','"+hname.getText()+"' )")).execute();
+                "', '"+roll.getText()+"','"+s3+"', '"+roomno.getText()+"','"+blood.getText()+"','"+hname.getText()+"' )")).execute();
 
 
 
