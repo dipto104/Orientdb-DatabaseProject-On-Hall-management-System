@@ -26,6 +26,7 @@ import java.util.ResourceBundle;
 public class Employeedatacontroller implements Initializable{
     Main main;
     public OrientGraph graph;
+    public static int passdelalertvar=2;
     public static String selectedemid;
     public String selectjobid;
     public String selectsalary;
@@ -43,6 +44,11 @@ public class Employeedatacontroller implements Initializable{
     TableColumn<Employeetable,String> salary;
     public Employeedatacontroller(){
         graphinit();
+        int temp=Deletealertcontroller.yes;
+        if(temp==1) {
+            graph.command(new OCommandSQL("DELETE FROM employee WHERE emid = '" + selectedemid + "'")).execute();
+            tableinsert();
+        }
     }
     public void setMain(Main scene){
         main=scene;
@@ -52,9 +58,10 @@ public class Employeedatacontroller implements Initializable{
         main.backmenu();
     }
     public void Actionupdate() throws IOException {
-        main.showupdatedatapage();
+        main.showpdateemployeepage();
     }
     public void Actiondelete() throws Exception {
+        passdelalertvar =1;
         main.Deletetallert();
     }
     public void Actioninsert()throws Exception{
@@ -112,10 +119,11 @@ public class Employeedatacontroller implements Initializable{
             data.clear();
 
             String s1, s2, s3, s4, s5, s6;
+            System.out.println("- Bought: "+selectjobid);
 
             for (Vertex v : (Iterable<Vertex>) graph.command(
                     new OCommandSQL(
-                            "SELECT * FROM Employee jobid='"+selectjobid+"' ORDER BY emid ASC")).execute()) {
+                            "SELECT * FROM Employee where jobid='"+selectjobid+"' ORDER BY emid ASC")).execute()) {
                 //System.out.println("- Bought: " + v.getProperty("name") + v.getId());
                 s1 = v.getProperty("emid").toString();
                 s2 = v.getProperty("name").toString();
@@ -124,7 +132,7 @@ public class Employeedatacontroller implements Initializable{
                 s5 = v.getProperty("salary").toString();
 
 
-                System.out.println("- Bought: " +selectjobid);
+                //System.out.println("- Bought: " + s1+s2+s3+s4);
                 Employeetable entry = new Employeetable(s1, s2, s3, s4, s5);
                 data.add(entry);
                 //s1=v.getProperty("name").toString();

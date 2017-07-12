@@ -19,7 +19,12 @@ public class Deletealertcontroller {
         yes=1;
         System.out.println(yes);
         main.quitdelete();
-        main.showstudentdatapage();
+        if(Employeedatacontroller.passdelalertvar==1){
+            main.showemployeedatapage();
+            Employeedatacontroller.passdelalertvar=2;
+        }else {
+            main.showstudentdatapage();
+        }
     }
     public void Actionno() throws IOException {
         yes=2;

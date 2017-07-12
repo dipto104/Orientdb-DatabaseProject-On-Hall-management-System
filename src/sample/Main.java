@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8,scene9,scene10;
+    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8,scene9,scene10,scene11;
     Stage mainStage,inertstage1,deletestage1;
     @Override
     public void start(Stage stage) throws Exception {
@@ -103,6 +103,18 @@ public class Main extends Application {
         scene4=new Scene(root,700,650);
         mainStage.setTitle("Update Students Data");
         mainStage.setScene(scene4);
+        mainStage.show();
+    }
+    public void showpdateemployeepage()throws IOException{
+        FXMLLoader loader =new FXMLLoader();
+        loader.setLocation(getClass().getResource("Updateemployeedata.fxml"));
+        Parent root=loader.load();
+        Updateemployeedatacontroller controller=loader.getController();
+        controller.setMain(this);
+
+        scene11=new Scene(root,700,650);
+        mainStage.setTitle("Update Employees Data");
+        mainStage.setScene(scene11);
         mainStage.show();
     }
     public void showemployeedatapage()throws IOException{

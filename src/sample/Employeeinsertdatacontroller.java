@@ -60,7 +60,7 @@ public class Employeeinsertdatacontroller {
                             "', '" + s2 + "','" + s3 + "', '" + s4 + "','" + s5 + "' )")).execute();
 
 
-            main.showstudentdatapage();
+            main.showemployeedatapage();
         }
     }
 
