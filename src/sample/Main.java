@@ -10,15 +10,15 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8,scene9,scene10,scene11;
+    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8,scene9,scene10,scene11,scene12;
     Stage mainStage,inertstage1,deletestage1;
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(getClass().getResource("homepage.fxml"));
+        loader.setLocation(getClass().getResource("Login.fxml"));
         Parent root = loader.load();
 
-        Hompagecontroller controller=loader.getController();
+        Logincontroller controller=loader.getController();
         controller.setMain(this);
         mainStage=stage;
 
@@ -26,6 +26,19 @@ public class Main extends Application {
         scene1 = new Scene(root,700,650);
         stage.setScene(scene1);
         stage.show();
+    }
+    public void showpage1()throws Exception{
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("homepage.fxml"));
+        Parent root = loader.load();
+
+        Hompagecontroller controller=loader.getController();
+        controller.setMain(this);
+        scene12 = new Scene(root,700,650);
+        mainStage.setTitle("Hall ManageMent System ");
+        mainStage.setScene(scene12);
+
+        mainStage.show();
     }
     /*public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("homepage.fxml"));
@@ -105,6 +118,7 @@ public class Main extends Application {
         mainStage.setScene(scene4);
         mainStage.show();
     }
+
     public void showpdateemployeepage()throws IOException{
         FXMLLoader loader =new FXMLLoader();
         loader.setLocation(getClass().getResource("Updateemployeedata.fxml"));
