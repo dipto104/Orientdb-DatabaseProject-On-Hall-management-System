@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="548.0" prefWidth="678.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Hompagecontroller">
   <children>
-    <Button layoutX="506.0" layoutY="398.0" mnemonicParsing="false" onAction="#exithome" prefWidth="131.0" text="Exit" />
+    <Button layoutX="506.0" layoutY="398.0" mnemonicParsing="false" onAction="#exithome" prefWidth="131.0" text="Log Out" />
     <Button layoutX="506.0" layoutY="177.0" mnemonicParsing="false" onAction="#insertstudent" prefWidth="131.0" text="Insert" />
     <Button layoutX="506.0" layoutY="232.0" mnemonicParsing="false" onAction="#Showstudentdata" prefWidth="131.0" text="Student Data" />
     <Button layoutX="506.0" layoutY="342.0" mnemonicParsing="false" onAction="#Showdiningfee" prefWidth="131.0" text="Dining_Fee" />
