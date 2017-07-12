@@ -9,13 +9,13 @@
 
 <AnchorPane prefHeight="556.000199999995" prefWidth="697.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Employeedatacontroller">
   <children>
-    <TableView fx:id="table1" layoutX="0.0" layoutY="52.0" prefHeight="392.0" prefWidth="697.0">
+    <TableView id="table1" fx:id="table2" layoutX="0.0" layoutY="52.0" prefHeight="392.0" prefWidth="697.0">
       <columns>
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Employee_Id" fx:id="roll" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Employee_Id" fx:id="emid" />
         <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="158.0" text="Name" fx:id="name" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="122.0" text="Job_Id" fx:id="dept" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Joining_Date" fx:id="blood" />
-        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="218.0" text="Salary" fx:id="roomno" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="122.0" text="Job_Id" fx:id="jobid" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Joining_Date" fx:id="jdate" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="218.0" text="Salary" fx:id="salary" />
       </columns>
     </TableView>
     <Label alignment="CENTER" layoutX="264.0" layoutY="0.0" prefHeight="52.0" prefWidth="196.0" text="Employee Records">
@@ -31,8 +31,8 @@
         <Font name="System Bold" size="15.0" />
       </font>
     </Label>
-    <Button layoutX="285.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionroomstudent" prefWidth="108.0" text="Room_Stud" />
-    <Button layoutX="157.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actiondeptstudent" prefWidth="101.0" text="Dept_Stud" />
+    <Button layoutX="285.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionsamesalary" prefWidth="108.0" text="Same_Salary" />
+    <Button layoutX="157.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionsamejob" prefWidth="101.0" text="Same_Job" />
     <Button layoutX="30.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionallstudent" text="All_Student" />
     <Button layoutX="607.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actioninsert" prefWidth="71.0" text="Insert" />
   </children>

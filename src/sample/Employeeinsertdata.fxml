@@ -13,11 +13,11 @@
     <Label layoutX="37.0" layoutY="156.0" text="Employee_Id" />
     <Label layoutX="37.0" layoutY="226.0" text="Job_Id" />
     <Label layoutX="37.0" layoutY="300.0" text="Joining_Date" />
-    <TextField fx:id="roll" layoutX="37.0" layoutY="183.0" prefWidth="200.0" />
-    <TextField fx:id="roomno" layoutX="37.0" layoutY="258.0" prefWidth="200.0" />
-    <TextField fx:id="dept" layoutX="37.0" layoutY="334.0" prefWidth="200.0" />
+    <TextField id="roll" fx:id="emid" layoutX="37.0" layoutY="183.0" prefWidth="200.0" />
+    <TextField id="roomno" fx:id="jobid" layoutX="37.0" layoutY="258.0" prefWidth="200.0" />
+    <TextField id="dept" fx:id="jdate" layoutX="37.0" layoutY="334.0" prefWidth="200.0" />
     <Label layoutX="37.0" layoutY="373.0" text="Salary" />
-    <TextField fx:id="blood" layoutX="37.0" layoutY="407.0" prefWidth="200.0" />
+    <TextField id="blood" fx:id="salary" layoutX="37.0" layoutY="407.0" prefWidth="200.0" />
     <Label alignment="CENTER" contentDisplay="CENTER" layoutX="256.0" layoutY="25.0" prefHeight="37.0" prefWidth="149.0" text="Employee Entry" />
     <Button layoutX="37.0" layoutY="477.0" mnemonicParsing="false" onAction="#actionsubmit" text="Submit" />
     <Button layoutX="145.0" layoutY="477.0" mnemonicParsing="false" onAction="#actioncancel" text="Cancel" />
