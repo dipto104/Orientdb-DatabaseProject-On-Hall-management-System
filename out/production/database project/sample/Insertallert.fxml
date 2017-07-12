@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="264.0" prefWidth="590.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Insertallertcontroller">
   <children>
-    <Label alignment="CENTER" layoutX="43.0" layoutY="-7.0" prefHeight="151.0" prefWidth="505.0" text="Please Fill Up The Form Correctly!!!!" textFill="#cc0000">
+    <Label alignment="CENTER" layoutX="43.0" layoutY="75.0" prefHeight="151.0" prefWidth="505.0" text="Please Fill Up The Form Correctly!!!!" textFill="#cc0000">
       <font>
         <Font name="System Bold" size="28.0" />
       </font>

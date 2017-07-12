@@ -122,14 +122,14 @@ public class Diningpaymentcontroller {
             counter++;
         }
         else{
-            s1="1500";
+            s1="1500/-";
         }
         if(Cb2.isIndeterminate()==false &&Cb2.isSelected()==true){
             s2="paid";
             counter++;
         }
         else{
-            s2="1500";
+            s2="1500/-";
 
         }
         if(Cb3.isIndeterminate()==false &&Cb3.isSelected()==true){
@@ -137,7 +137,7 @@ public class Diningpaymentcontroller {
             counter++;
         }
         else{
-            s3="1500";
+            s3="1500/-";
 
         }
         if(Cb4.isIndeterminate()==false &&Cb4.isSelected()==true){
@@ -145,24 +145,25 @@ public class Diningpaymentcontroller {
             counter++;
         }
         else{
-            s4="1500";
+            s4="1500/-";
         }
         if(Cb5.isIndeterminate()==false &&Cb5.isSelected()==true){
             s5="paid";
             counter++;
         }
         else{
-            s5="1500";
+            s5="1500/-";
         }
         if(Cb6.isIndeterminate()==false &&Cb6.isSelected()==true){
             s6="paid";
             counter++;
         }
         else{
-            s6="1500";
+            s6="1500/-";
         }
         counter=9000-counter*1500;
         s9=Integer.toString(counter);
+        s9=s9+"/-";
 
         graph.command(new OCommandSQL(
                 "UPDATE Diningfee SET mess1st='"+s1+"',mess2nd='"+s2+"',mess3rd='"+s3+"'," +

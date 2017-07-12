@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8;
+    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8,scene9,scene10;
     Stage mainStage,inertstage1,deletestage1;
     @Override
     public void start(Stage stage) throws Exception {
@@ -103,6 +103,30 @@ public class Main extends Application {
         scene4=new Scene(root,700,650);
         mainStage.setTitle("Update Students Data");
         mainStage.setScene(scene4);
+        mainStage.show();
+    }
+    public void showemployeedatapage()throws IOException{
+        FXMLLoader loader =new FXMLLoader();
+        loader.setLocation(getClass().getResource("Employeedata.fxml"));
+        Parent root=loader.load();
+        Employeedatacontroller controller=loader.getController();
+        controller.setMain(this);
+
+        scene9=new Scene(root,700,650);
+        mainStage.setTitle("Employee Records");
+        mainStage.setScene(scene9);
+        mainStage.show();
+    }
+    public void shoinsertwemployeepage()throws IOException{
+        FXMLLoader loader =new FXMLLoader();
+        loader.setLocation(getClass().getResource("Employeeinsertdata.fxml"));
+        Parent root=loader.load();
+        Employeeinsertdatacontroller controller=loader.getController();
+        controller.setMain(this);
+
+        scene10=new Scene(root,700,650);
+        mainStage.setTitle("Employee Records");
+        mainStage.setScene(scene10);
         mainStage.show();
     }
     public void showstudentfeespage()throws IOException{
