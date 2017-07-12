@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="259.9999000000025" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Deletealertcontroller">
+  <children>
+    <Label alignment="CENTER" layoutX="0.0" layoutY="14.0" prefHeight="82.0" prefWidth="600.0" text="Are You Sure You Want To Delete?" textFill="#cc0000">
+      <font>
+        <Font name="System Bold" size="28.0" />
+      </font>
+    </Label>
+    <Button layoutX="176.0" layoutY="170.0" mnemonicParsing="false" onAction="#Actionyes" prefWidth="70.0" text="Yes" textFill="#009918">
+      <font>
+        <Font name="System Bold" size="20.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button font="$x1" layoutX="338.0" layoutY="170.0" mnemonicParsing="false" onAction="#Actionno" prefWidth="70.0" text="No" textFill="RED" />
+  </children>
+</AnchorPane>

@@ -46,6 +46,12 @@ public  class Studentdatacontroller implements Initializable{
     TableColumn<Table,String> hallname;
     public Studentdatacontroller(){
         graphinit();
+        int temp=Deletealertcontroller.yes;
+        if(temp==1) {
+            graph.command(new OCommandSQL("DELETE FROM STUDENT WHERE roll = '" + selectedroll + "'")).execute();
+            graph.command(new OCommandSQL("DELETE FROM Diningfee WHERE roll = '" + selectedroll + "'")).execute();
+            tableinsert();
+        }
 
     }
 
@@ -59,10 +65,8 @@ public  class Studentdatacontroller implements Initializable{
     public void Actionupdate() throws IOException {
         main.showupdatedatapage();
     }
-    public void Actiondelete() {
-        graph.command(new OCommandSQL("DELETE FROM STUDENT WHERE roll = '"+selectedroll+"'")).execute();
-        graph.command(new OCommandSQL("DELETE FROM Diningfee WHERE roll = '"+selectedroll+"'")).execute();
-        tableinsert();
+    public void Actiondelete() throws Exception {
+        main.Deletetallert();
     }
     public void Actiondeptstudent(){
         depttableinsert();

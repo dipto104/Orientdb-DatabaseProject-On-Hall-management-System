@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Main extends Application {
 
     Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8;
-    Stage mainStage;
+    Stage mainStage,inertstage1,deletestage1;
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader=new FXMLLoader();
@@ -33,6 +33,36 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 600, 650));
         primaryStage.show();
     }*/
+    public void Insertallert() throws Exception {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("Insertallert.fxml"));
+        Parent root = loader.load();
+
+        Insertallertcontroller controller=loader.getController();
+        controller.setMain(this);
+        // mainStage=inertstage1;
+        inertstage1=new Stage();
+
+
+        scene7 = new Scene(root,580,250);
+        inertstage1.setScene(scene7);
+        inertstage1.show();
+    }
+    public void Deletetallert() throws Exception {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("Deletealert.fxml"));
+        Parent root = loader.load();
+
+        Deletealertcontroller controller=loader.getController();
+        controller.setMain(this);
+        // mainStage=inertstage1;
+        deletestage1=new Stage();
+
+
+        scene8 = new Scene(root,580,250);
+        deletestage1.setScene(scene8);
+        deletestage1.show();
+    }
     public void showHomePage() throws IOException {
 
         FXMLLoader loader=new FXMLLoader();
@@ -114,6 +144,9 @@ public class Main extends Application {
     }
     public void quit()throws IOException {
         mainStage.close();
+    }
+    public void quitdelete()throws IOException {
+        deletestage1.close();
     }
 
 

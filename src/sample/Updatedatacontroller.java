@@ -73,9 +73,24 @@ public class Updatedatacontroller {
         roomno.setText(s5);
         hname.setText(s6);
     }
-    public void Actionsubmit() throws IOException {
-        updatedata();
-        main.showstudentdatapage();
+    public void Actionsubmit() throws Exception {
+        String s3=dept.getText();
+        String s1=name.getText();
+        String s2=roll.getText();
+        String s4=roomno.getText();
+        String s5=blood.getText();
+        String s6=hname.getText();
+        if(s1.trim().equals("") || s2.trim().equals("")  || s3.trim().equals("") || s4.trim().equals("")  || s5.trim().equals("")  || s6.trim().equals("")) {
+            // System.out.println("faltu");
+            main.Insertallert();
+
+
+        }
+        else {
+
+            updatedata();
+            main.showstudentdatapage();
+        }
     }
     public void updatedata(){
         graph.command(new OCommandSQL(
