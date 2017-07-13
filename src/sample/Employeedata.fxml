@@ -23,17 +23,17 @@
         <Font name="Arial Black" size="15.0" />
       </font>
     </Label>
-    <Button layoutX="607.0" layoutY="521.0" mnemonicParsing="false" onAction="#Actionback" prefWidth="71.0" text="Back" />
-    <Button layoutX="516.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actiondelete" text="Delete" />
-    <Button layoutX="412.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionupdate" text="Update" />
-    <Label layoutX="28.0" layoutY="504.0" prefHeight="52.0" prefWidth="346.0" text="Select Student_id to Update or Delete records" textFill="RED">
+    <Button layoutX="599.0" layoutY="521.0" mnemonicParsing="false" onAction="#Actionback" prefWidth="79.0" text="Back" />
+    <Button layoutX="506.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actiondelete" prefWidth="79.0" text="Delete" />
+    <Button layoutX="412.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionupdate" prefWidth="79.0" text="Update" />
+    <Label layoutX="28.0" layoutY="504.0" prefHeight="52.0" prefWidth="346.0" text="Select Employee_id to Update or Delete records" textFill="RED">
       <font>
         <Font name="System Bold" size="15.0" />
       </font>
     </Label>
     <Button layoutX="285.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionsamesalary" prefWidth="108.0" text="Same_Salary" />
-    <Button layoutX="157.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionsamejob" prefWidth="101.0" text="Same_Job" />
-    <Button layoutX="30.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionallstudent" text="All_Student" />
-    <Button layoutX="607.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actioninsert" prefWidth="71.0" text="Insert" />
+    <Button layoutX="157.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionsamejob" prefWidth="108.0" text="Same_Job" />
+    <Button layoutX="14.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actionallstudent" text="All_Employees" />
+    <Button layoutX="599.0" layoutY="477.0" mnemonicParsing="false" onAction="#Actioninsert" prefWidth="79.0" text="Insert" />
   </children>
 </AnchorPane>

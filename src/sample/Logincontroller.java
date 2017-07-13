@@ -15,6 +15,7 @@ import java.io.IOException;
  */
 public class Logincontroller {
     Main main;
+    int var=0;
     OrientGraph graph;
     @FXML
     TextField username;
@@ -33,7 +34,7 @@ public class Logincontroller {
         String u=username.getText().toString();
         String p=pass.getText().toString();
         if(u.trim().equals("")||p.trim().equals("")){
-            main.Insertallert();
+            main.passallert();
         }
         else {
             for (Vertex v : (Iterable<Vertex>) graph.command(
@@ -46,14 +47,19 @@ public class Logincontroller {
                 System.out.println(s2);
                 if(s2!=null && s1!=null){
                     main.showpage1();
+                    var=1;
                 }
                 else{
-                    main.Insertallert();
+                    var=2;
+
                 }
 
 
                 //s1=v.getProperty("name").toString();
 
+            }
+            if(var!=1){
+                main.passallert();
             }
         }
 

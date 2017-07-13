@@ -61,9 +61,18 @@ public class Studentdiningfeecontroller implements Initializable{
     public void Actionback() throws IOException {
         main.backmenu();
     }
-    public void Actionmesspay() throws IOException {
+    public void Actionmesspay() throws Exception {
         sendroll=inputroll.getText();
-        main.ShowDiningpaymentpage();
+        if(inputroll.getText().trim().equals("")){
+            main.Insertallert();
+        }
+        else if(sendroll.matches(".*[a-z].*")){
+            main.Insertallert();
+        }
+        else{
+            main.ShowDiningpaymentpage();
+        }
+
 
     }
     public void graphinit() {

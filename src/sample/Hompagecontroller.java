@@ -12,10 +12,7 @@ public class Hompagecontroller {
 
     }
     public void exithome() throws IOException {
-        main.quit();
-    }
-    public void insertstudent() throws IOException {
-        main.showHomePage();
+        main.backlogin();
     }
     public void Showstudentdata()throws IOException{
         main.showstudentdatapage();

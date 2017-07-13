@@ -5,13 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sun.security.util.Password;
 
 import java.io.IOException;
 
 public class Main extends Application {
 
-    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8,scene9,scene10,scene11,scene12;
-    Stage mainStage,inertstage1,deletestage1;
+    Scene scene1,scene2,scene3,scene4,scene5,scene6,scene7,scene8,scene9,scene10,scene11,scene12,scene13,scene14;
+    Stage mainStage,inertstage1,deletestage1,passstage1;
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader=new FXMLLoader();
@@ -75,6 +76,20 @@ public class Main extends Application {
         scene8 = new Scene(root,580,250);
         deletestage1.setScene(scene8);
         deletestage1.show();
+    }
+    public void passallert() throws Exception {
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("Passwordalert.fxml"));
+        Parent root = loader.load();
+        Passwordalertcontroller controller=loader.getController();
+        controller.setMain(this);
+        // mainStage=inertstage1;
+        passstage1=new Stage();
+
+
+        scene14 = new Scene(root,580,250);
+        passstage1.setScene(scene14);
+        passstage1.show();
     }
     public void showHomePage() throws IOException {
 
@@ -192,11 +207,29 @@ public class Main extends Application {
 
         mainStage.show();
     }
+    public void backlogin() throws IOException{
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("Login.fxml"));
+        Parent root = loader.load();
+
+        Logincontroller controller=loader.getController();
+        controller.setMain(this);
+        scene13=new Scene(root,700,650);
+        mainStage.setScene(scene13);
+
+        mainStage.show();
+    }
     public void quit()throws IOException {
         mainStage.close();
     }
     public void quitdelete()throws IOException {
         deletestage1.close();
+    }
+    public void quitinsert()throws IOException {
+        inertstage1.close();
+    }
+    public void quitpass()throws IOException {
+        passstage1.close();
     }
 
 

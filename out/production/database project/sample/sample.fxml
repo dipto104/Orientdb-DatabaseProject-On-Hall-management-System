@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
 
 <GridPane alignment="CENTER" hgap="10.0" prefHeight="596.0" prefWidth="789.0000999999975" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
   <children>
@@ -24,7 +25,11 @@
         <TextField fx:id="blood" layoutX="37.0" layoutY="407.0" prefWidth="200.0" />
         <Label layoutX="37.0" layoutY="454.0" text="Hall_Name" />
         <TextField fx:id="hname" layoutX="37.0" layoutY="484.0" prefWidth="200.0" />
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="256.0" layoutY="25.0" prefHeight="37.0" prefWidth="149.0" text="Student Entry" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="262.0" layoutY="35.0" prefHeight="37.0" prefWidth="149.0" text="Student Entry" textFill="#002966">
+          <font>
+            <Font name="System Bold" size="20.0" />
+          </font>
+        </Label>
         <Button layoutX="120.0" layoutY="531.0" mnemonicParsing="false" onAction="#actionsubmit" text="Submit" />
         <Button layoutX="237.0" layoutY="531.0" mnemonicParsing="false" onAction="#actioncancel" text="Cancel" />
       </children>

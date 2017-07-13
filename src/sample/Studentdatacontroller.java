@@ -68,6 +68,9 @@ public  class Studentdatacontroller implements Initializable{
     public void Actiondelete() throws Exception {
         main.Deletetallert();
     }
+    public void Actioninsert() throws IOException {
+        main.showHomePage();
+    }
     public void Actiondeptstudent(){
         depttableinsert();
     }
