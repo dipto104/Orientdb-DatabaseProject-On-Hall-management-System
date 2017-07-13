@@ -75,6 +75,7 @@ public class Studentdiningfeecontroller implements Initializable{
 
 
     }
+
     public void graphinit() {
         graph = new OrientGraph("remote:localhost/Project1",
                 "root", "12345");
